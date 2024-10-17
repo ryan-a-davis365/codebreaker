@@ -45,5 +45,30 @@ def instructions():
     print("Are you ready? (Y to play, N to return to the menu)")
 
     play_again()
-    
+
+
+def play_again():
+    """
+    Checks if the player entered Y or N correctly,
+    and directs them to the game or menu.
+    """
+    while True:
+        try:
+            play_again_choice = (input("Enter choice: \n")).upper().strip()
+            if play_again_choice == "Y":
+                start_game()
+                break
+            elif play_again_choice == "N":
+                main_menu()
+                break
+            else:
+                raise ValueError
+
+        except ValueError:
+            print("""
+            Invalid key pressed.
+            Press Y to play the game, or N to return to the main menu.
+            """)
+
+
 main_menu()
