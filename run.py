@@ -1,5 +1,8 @@
 #menu screen
 def main_menu():
+    """
+    Menu screen with options for player
+    """
     print("Press 1 to play. Press 2 for instructions. Press 3 to exit.")
 
     while True:
