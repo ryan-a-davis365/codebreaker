@@ -1,3 +1,5 @@
+import random
+
 #menu screen
 def main_menu():
     """
@@ -31,4 +33,17 @@ def main_menu():
             """)
 
 
+def instructions():
+    """
+    Instructions for the user about how to play
+    """
+
+    print("A secret code of 4 numbers will be randomly generated.\n")
+    print("Your challenge is to find what numbers the code consists off.\n")
+    print("You have a maximum of 6 attempts. Remember a number can appear more than once.\n")
+    print("Only guess a 4 number code with no commas or spaces.\n")
+    print("Are you ready? (Y to play, N to return to the menu)")
+
+    play_again()
+    
 main_menu()
