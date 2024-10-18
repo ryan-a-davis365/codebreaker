@@ -103,6 +103,23 @@ def start_game():
             print("You guess the code correctly!")
             print(f"The secret code is: {display_user_guess(original_answer)}\n")
             print(f"You cracked the code in {attempt_number} attempts.\n")
+            print("Would you like to play again? (Y/N)")
+            play_again()
+            break
+        
+        elif attempt_number == MAX_ATTEMPTS and position != CODE_LENGTH:
+            print(f"The secret code was: {display_user_guess(original_answer)}\n")
+            print("You were unable to guess the code. Try again? (Y/N)")
+            play_again()
+            break
+        
+        else:
+            attempt_number += 1
+            print(f"Correct number and position: {position}")
+            print(f"Correct number, but incorrect position: {number}")
+            print(f"You have {MAX_ATTEMPTS - attempt_number + 1} attempts remaining.\n")
+
+
 
 main_menu()
 start_game()
