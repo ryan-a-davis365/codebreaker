@@ -120,6 +120,14 @@ def start_game():
             print(f"You have {MAX_ATTEMPTS - attempt_number + 1} attempts remaining.\n")
 
 
+def user_guess_input(attempt):
+    """
+    Asks the user to enter their guess and validates it.
+    Outputs ValueError if the input is invalid.
+    """
+    while True:
+        try:
+            
 
 main_menu()
 start_game()
