@@ -1,4 +1,10 @@
+#import
 import random
+
+#constants
+RANDOM_NUMBERS = random.randrange(1000, 10000)
+CODE_LENGTH = 4
+MAX_ATTEMPTS = 8
 
 #menu screen
 def main_menu():
@@ -11,7 +17,7 @@ def main_menu():
         try:
             menu_select = int(input("Press key: \n"))
             if menu_select == 1:
-                run_game()
+                start_game()
                 break
             elif menu_select == 2:
                 instructions()
@@ -71,4 +77,32 @@ def play_again():
             """)
 
 
+def generate_code():
+    """
+    Generates a 4-number code. Duplicates are enabled
+    """
+   
+
+def start_game():
+    """
+    Starts the main game functions
+    """
+    print("Guess the 4 digit number:")
+
+    original_answer = generate_code()
+    attempt_number = 0
+
+    while attempt_number <= MAX_ATTEMPTS:
+        user_guess = user_guess_input(attempt_number)
+        modified_answer = list(original_answer)
+
+        print(f"{display_user_guess(user_guess)}\n")
+
+        position, number = check_result(user_guess, modified_answer)
+        if position == CODE_LENGTH:
+            print("You guess the code correctly!")
+            print(f"The secret code is: {display_user_guess(original_answer)}\n")
+            print(f"You cracked the code in {attempt_number} attempts.\n")
+
 main_menu()
+start_game()
