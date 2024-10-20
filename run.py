@@ -2,7 +2,7 @@
 import random
 
 #constants
-RANDOM_NUMBERS = random.randrange(1000, 10000)
+RANDOM_NUMBERS = list(range(10))
 CODE_LENGTH = 4
 MAX_ATTEMPTS = 8
 
@@ -81,7 +81,12 @@ def generate_code():
     """
     Generates a 4-number code. Duplicates are enabled
     """
-   
+    number_code = []
+    while len(number_code) < CODE_LENGTH:
+        random_number = random.choice(RANDOM_NUMBERS)
+        number_code.append(random_number)
+    return number_code
+
 
 def start_game():
     """
