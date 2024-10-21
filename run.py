@@ -175,4 +175,3 @@ def check_result(user_guess, original_answer):
     return position, number
 
 main_menu()
-start_game()
