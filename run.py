@@ -132,6 +132,24 @@ def user_guess_input(attempt):
     """
     while True:
         try:
+            guess = input("Enter your guess: ")
+            guess_list = [g for g in guess]
+
+            if len(guess_list) != CODE_LENGTH:
+                raise ValueError(f"Invalid - please enter {CODE_LENGTH} valid characters.\n" +
+                                 f"Please choose only numbers being as you are guessing a 4 number code.\n")
+                continue
+
+            for character in guess_list:
+                if character not in RANDOM_NUMBERS:
+                    raise ValueError(f"Error: You have entered one or more invalid characters,\n" +
+                                     f"Please choose only numbers being as you are guessing a 4 number code.\n")
+            break
+
+        except ValueError as e:
+            print(e)
+
+    return guess_list
             
 
 main_menu()
