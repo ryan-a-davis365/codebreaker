@@ -4,7 +4,7 @@ import random
 #constants
 RANDOM_NUMBERS = list(range(10))
 CODE_LENGTH = 4
-MAX_ATTEMPTS = 8
+MAX_ATTEMPTS = 11
 
 #menu screen
 def main_menu():
@@ -46,7 +46,7 @@ def instructions():
 
     print("A secret code of 4 numbers will be randomly generated.\n")
     print("Your challenge is to find what numbers the code consists off.\n")
-    print("You have a maximum of 6 attempts. Remember a number can appear more than once.\n")
+    print("You have a maximum of 12 attempts. Remember a number can appear more than once.\n")
     print("Only guess a 4 number code with no commas or spaces.\n")
     print("Are you ready? (Y to play, N to return to the menu)")
 
