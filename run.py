@@ -132,25 +132,47 @@ def user_guess_input(attempt):
     """
     while True:
         try:
-            guess = input("Enter your guess: ")
-            guess_list = [g for g in guess]
+            guess = input(f"Attempt {attempt + 1}: Enter your 4-digit guess: ").strip()
+            
+            if len(guess) != CODE_LENGTH or not guess.isdigit():
+                raise ValueError(f"Invalid - please enter exactly {CODE_LENGTH} digits.\n")
 
-            if len(guess_list) != CODE_LENGTH:
-                raise ValueError(f"Invalid - please enter {CODE_LENGTH} valid characters.\n" +
-                                 f"Please choose only numbers being as you are guessing a 4 number code.\n")
-                continue
-
-            for character in guess_list:
-                if character not in RANDOM_NUMBERS:
-                    raise ValueError(f"Error: You have entered one or more invalid characters,\n" +
-                                     f"Please choose only numbers being as you are guessing a 4 number code.\n")
-            break
+            guess_list = [int(digit) for digit in guess]
+            return guess_list
 
         except ValueError as e:
             print(e)
-
-    return guess_list
             
+
+def display_user_guess(guess):
+    """
+    Displays the user's guess.
+    """
+    return ''.join(str(digit) for digit in guess)
+
+def check_result(user_guess, original_answer):
+    """
+    Checks the user's guess against the original answer.
+    Returns the number of digits that are correct and in the correct position
+    and the number of correct digits that are in the wrong position.
+    """
+    position = 0
+    number = 0
+
+    modified_answer = original_answer.copy()
+
+    for i in range(CODE_LENGTH):
+        if user_guess[i] == modified_answer[i]:
+            position += 1
+            modified_answer[i] = None
+            user_guess[i] = -1
+
+    for digit in user_guess:
+        if digit in modified_answer:
+            number += 1
+            modified_answer[modified_answer.index(digit)] = None
+
+    return position, number
 
 main_menu()
 start_game()
