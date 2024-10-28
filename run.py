@@ -1,4 +1,5 @@
 import random
+import classes.graphics as graphics
 
 RANDOM_NUMBERS = list(range(10))
 CODE_LENGTH = 4
@@ -8,6 +9,8 @@ def main_menu():
     """
     Menu screen with options for player
     """
+    graphics.header_image()
+    graphics.main_logo()
     print("Press 1 to play. Press 2 for instructions. Press 3 to exit.")
 
     while True:
@@ -94,6 +97,8 @@ def start_game():
     attempt_number = 0
     original_answer = generate_code()
 
+    print(f"(For testing/debugging) The secret code is: {display_user_guess(original_answer)}")
+
     while attempt_number <= MAX_ATTEMPTS:
         user_guess = user_guess_input(attempt_number)
         modified_answer = list(original_answer)
@@ -102,6 +107,7 @@ def start_game():
 
         position, number = check_result(user_guess, modified_answer)
         if position == CODE_LENGTH:
+            graphics.you_win()
             print("You guess the code correctly!")
             print(f"The secret code is: {display_user_guess(original_answer)}\n")
             print(f"You cracked the code in {attempt_number} attempts.\n")
@@ -110,6 +116,7 @@ def start_game():
             break
         
         elif attempt_number == MAX_ATTEMPTS and position != CODE_LENGTH:
+            graphics.game_over()
             print(f"The secret code was: {display_user_guess(original_answer)}\n")
             print("You were unable to guess the code. Try again? (Y/N)")
             play_again()
