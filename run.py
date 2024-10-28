@@ -1,12 +1,9 @@
-#import
 import random
 
-#constants
 RANDOM_NUMBERS = list(range(10))
 CODE_LENGTH = 4
 MAX_ATTEMPTS = 11
 
-#menu screen
 def main_menu():
     """
     Menu screen with options for player
@@ -94,8 +91,8 @@ def start_game():
     """
     print("Guess the 4 digit number:")
 
-    original_answer = generate_code()
     attempt_number = 0
+    original_answer = generate_code()
 
     while attempt_number <= MAX_ATTEMPTS:
         user_guess = user_guess_input(attempt_number)
@@ -149,6 +146,7 @@ def display_user_guess(guess):
     Displays the user's guess.
     """
     return ''.join(str(digit) for digit in guess)
+
 
 def check_result(user_guess, original_answer):
     """
