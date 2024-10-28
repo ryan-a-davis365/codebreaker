@@ -1,32 +1,7 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Code Breaker**
 
-Welcome,
+## **Application Overview**
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **May 14, 2024**
+Code Breaker is a terminal-based game where the user is givven a secret code of 4 numbers that are randomly generated from 0-9, and concealed from the player. The player is then given 12 attempts to guess the secret code. If the player succeeds and guesses the code in the 12 attempts they win, if they do not, they lose. Duplicate numbers are allowed, which makes it more difficult for the player.
 
-## Reminders
-
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
+When creating this game, I really wanted to focus on everything working properly but also with a theme that is in relation to the time of it being made, halloween. I have put text with blood-like font at the end of the game that tells you if you have won or lost, i have also added a pumpkin to the home page, all of this was created by the use of [ASCII.](https://www.asciiart.eu/)
