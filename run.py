@@ -97,8 +97,6 @@ def start_game():
     attempt_number = 0
     original_answer = generate_code()
 
-    print(f"(For testing/debugging) The secret code is: {display_user_guess(original_answer)}")
-
     while attempt_number <= MAX_ATTEMPTS:
         user_guess = user_guess_input(attempt_number)
         modified_answer = list(original_answer)
