@@ -103,3 +103,18 @@ In order to progress away from the main menu, the player is required to press on
 As Python automatically converts input into strings, the user input is first converted to an integer using the built-in 'int()' function. The int(input()) function sits within a try statement that assumes there will be no error in the code and directs the player to the appropriate part of the program if they enter 1, 2 or 3. A ValueError is then raised in an except statement for any input that is not a 1, 2 or 3. Shown below is an example of what the program provdes if you enter an invalid number, a letter, a special character and the text version of a number:
 
 ![Screenshot of ValueError for invalid number and letter](docs/images/invalid-main-menu.png)
+
+
+#### **Main Logo Graphic**
+
+![Screenshot of the main logo graphic in VSCode](docs/images/main-menu-graphic.png)
+
+The main logo for this game was decided due to the time of when it was being made, Halloween. I got the pumpkin ASCII art from this website. [ASCII Art](https://www.asciiart.eu/holiday-and-events/halloween). I also used the Text to Ascii Art for all the bloody text that is used. [Text to ASCII Art](https://www.asciiart.eu/text-to-ascii-art)
+
+#### **Instructions**
+
+If the player would like to know the instructions to the game they can simply enter '2' when they are on the main menu screen. Once the player has entered '2' they are given a set of instructions just like this:
+
+![Screenshot of the instructions page](docs/images/instructions.png)
+
+Below the instructions, the player is offered 2 choices. One being 'Y' if he would like to play the game and 'N' if he would like to return to the main menu. If the user enters 'Y' then the start_game() function runs.
