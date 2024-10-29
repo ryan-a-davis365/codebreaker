@@ -87,3 +87,4 @@ Two libraries were imported for this code:
 **random**:
 
 - random.choice() was utilised in the generate_code() function for the game, and is necessary in order to create a randomly generated code of 4 numbers from 0-9.
+
