@@ -118,3 +118,19 @@ If the player would like to know the instructions to the game they can simply en
 ![Screenshot of the instructions page](docs/images/instructions.png)
 
 Below the instructions, the player is offered 2 choices. One being 'Y' if he would like to play the game and 'N' if he would like to return to the main menu. If the user enters 'Y' then the start_game() function runs.
+
+#### **Exit Game**
+
+If the player wishes to exit the game from the menu, they can enter '3', and the following text will display before the program will close and no further input can be entered into the terminal:
+
+![Screenshot of exit game graphic](docs/images/exiting-game.png)
+
+### **Run Game**
+
+When the user either enters '1' from the main menu, or enters 'Y' in the play_again() function, the run_game() function is called and the game begins, the player is then met with the following screen:
+
+![Screenshot of the main game page](docs/images/guess.png)
+
+#### **Generating the Secret Code**
+
+The secret code is randomly generated using Python's 'random' library. Two constants have been declared that are crucial for the creation of this random secret code: 'RANDOM_NUMBERS', which declares the range of the numbers that will be randomly generated, and 'CODE_LENGTH' which determines how long the code is. The generate_code() function contains an empty list, and a while loop that tells the program that so long as the length of this empty list is less than the length of 'CODE_LENGTH', the following code needs to be run: 'random.choice(RANDOM_NUMBERS)' and the result is then appended to the empty list. By using this method, the function is still valid if one or both of the 'RANDOM_NUMBERS' and 'CODE_LENGTH' constants are updated to include different values or lengths.
