@@ -88,3 +88,18 @@ Two libraries were imported for this code:
 
 - random.choice() was utilised in the generate_code() function for the game, and is necessary in order to create a randomly generated code of 4 numbers from 0-9.
 
+## **Current Features**
+
+### **Main Menu with Error Handling**
+
+![Screenshot of the Main Menu](docs/images/main-menu.png)
+
+The main menu screen is the first thing the player sees when they start the program. It displays the main logo graphic, and below it provides the user with three options:
+
+![Screenshot of main menu options](docs/images/main-menu.png)
+
+In order to progress away from the main menu, the player is required to press one of these three options to take them to their required destination in the program.
+
+As Python automatically converts input into strings, the user input is first converted to an integer using the built-in 'int()' function. The int(input()) function sits within a try statement that assumes there will be no error in the code and directs the player to the appropriate part of the program if they enter 1, 2 or 3. A ValueError is then raised in an except statement for any input that is not a 1, 2 or 3. Shown below is an example of what the program provdes if you enter an invalid number, a letter, a special character and the text version of a number:
+
+![Screenshot of ValueError for invalid number and letter](docs/images/invalid-main-menu.png)
