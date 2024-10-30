@@ -106,7 +106,7 @@ def start_game():
         position, number = check_result(user_guess, modified_answer)
         if position == CODE_LENGTH:
             graphics.you_win()
-            print("You guess the code correctly!")
+            print("You guessed the code correctly!")
             print(f"The secret code is: {display_user_guess(original_answer)}\n")
             print(f"You cracked the code in {attempt_number} attempts.\n")
             print("Would you like to play again? (Y/N)")
