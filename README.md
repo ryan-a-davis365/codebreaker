@@ -134,3 +134,18 @@ When the user either enters '1' from the main menu, or enters 'Y' in the play_ag
 #### **Generating the Secret Code**
 
 The secret code is randomly generated using Python's 'random' library. Two constants have been declared that are crucial for the creation of this random secret code: 'RANDOM_NUMBERS', which declares the range of the numbers that will be randomly generated, and 'CODE_LENGTH' which determines how long the code is. The generate_code() function contains an empty list, and a while loop that tells the program that so long as the length of this empty list is less than the length of 'CODE_LENGTH', the following code needs to be run: 'random.choice(RANDOM_NUMBERS)' and the result is then appended to the empty list. By using this method, the function is still valid if one or both of the 'RANDOM_NUMBERS' and 'CODE_LENGTH' constants are updated to include different values or lengths.
+
+### **Player Guess Input with Error Handling**
+
+Similar to the main menu input, ValueErrors have been used to make sure that the user can only input one of the specified valid characters, and that the program doesn't crash or cause bugs if invalid characters are entered amd the program continues properly. If they enter anything other than the valid options, the player will recieve an error that tells them they have entered one or more invalid characters, and reminds them of the valid characters. If they enter a guess that is not equal to the specified code length, using valid or invalid characters, they receive an error telling them and reminding them of the valid characters.
+
+![Screenshot of ValueError examples if player inputs invalid characters and/or length](docs/images/invalid-4-digits.png)
+
+### **Comparing Player Guess to Secret Code**
+
+The method used to compare the player's guess with the secret code involves iterating through the guess, and iterating through the generated code to check for two things.
+
+Firstly, the numbers are compared specifically. For example, if the first character the player has entered in their guess, '1' for example, is an exact match to the generated code's first character '1'', the 'position' variable is increased.
+
+The remaining characters in the user's guess are then iterated through, and any matching characters with an incorrect index position increase the value of the 'number', which lets the player know they got a number correct but it is not in the correct position in the generated code. The 'position' and 'number' variables are then returned to be used in the run_game() function.
+
