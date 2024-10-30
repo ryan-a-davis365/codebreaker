@@ -129,7 +129,7 @@ def start_game():
             print(f"Correct number and position: {position}")
             print(f"Correct number, but incorrect position: {number}")
             print(f"You have {MAX_ATTEMPTS - attempt_number + 1}"
-                  f"attempts remaining.\n")
+                  f" attempts remaining.\n")
 
 
 def user_guess_input(attempt):
