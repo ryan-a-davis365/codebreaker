@@ -37,11 +37,10 @@ When creating this game, I really wanted to focus on everything working properly
    - [**Accessibility Features**](#accessibility-features)
 1. [**Testing**](#testing)
 1. [**Deployment**](#deployment)
-   - [**Cloning/Forking to Local Environments**](#cloningforking-to-local-environments)
    - [**Final Deployment (Render)**](#final-deployment-render)
 1. [**Credits**](#credits)
-   - [**Honourable Mentions**](#honourable-mentions)
-   - [**Code and Content References**](#code-and-content-references)
+   - [**Content**](#content)
+   - [**Acknowledgements**](#acknowledgements)
 
 ## **Planning Stages**
 
@@ -183,3 +182,32 @@ After the 'Game Over' screen and at the end of the instructions page:
 
 ![Screenshot of play_again() ValueErrors after 'Game Over'](docs/images/game-over-invalid.png)
 
+## **Considerations for Future Enhancements**
+
+I have a lot of ideas that I would see implemented into this game if i had more time. Some of those ideas are reasonably simple, but others much more complex that would involve a great deal of time and consideration in order to implement them well.
+
+### Difficulty Levels
+
+One of the reasonably simple ideas i would like to implement is different difficulty levels. This being less attempts to crack the 4 digit secret code, a 5 or 6 digit secret code with the same amount of attempts, different amounts of how many numbers could be repeated etc.
+
+### Improved UI
+
+Obviously, in a command line application it is quite hard to add a lot of depth to UI but i do feel like if i had more time i could of made my program look a little better, with the introduction of colors, spacing out my text so it appears on different parts of the screen etc.
+
+## **Testing**
+
+A separate file has been created for information about testing. Please click the following link to access it: [**TESTING.md**](TESTING.md)
+
+## **Deployment**
+
+## **Credits**
+
+### **Content**
+
+
+
+### **Acknowledgements**
+
+- Richard Wells (mentor) - He went above and beyond and helped me massively by giving me ideas on what program to make and helping me to understand python.
+- My family - They have motivated me and pushed me to keep going, even when i am struggling.
+- My girlfriend - For constantly being supportive of me and giving me the time and space to complete this project.

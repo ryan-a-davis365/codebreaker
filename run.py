@@ -5,6 +5,7 @@ RANDOM_NUMBERS = list(range(10))
 CODE_LENGTH = 4
 MAX_ATTEMPTS = 11
 
+
 def main_menu():
     """
     Menu screen with options for player
@@ -46,7 +47,8 @@ def instructions():
 
     print("A secret code of 4 numbers will be randomly generated.\n")
     print("Your challenge is to find what numbers the code consists off.\n")
-    print("You have a maximum of 12 attempts. Remember a number can appear more than once.\n")
+    print("You have a maximum of 12 attempts."
+          "Remember a number can appear more than once.\n")
     print("Only guess a 4 number code with no commas or spaces.\n")
     print("Are you ready? (Y to play, N to return to the menu)")
 
@@ -107,24 +109,27 @@ def start_game():
         if position == CODE_LENGTH:
             graphics.you_win()
             print("You guessed the code correctly!")
-            print(f"The secret code is: {display_user_guess(original_answer)}\n")
+            print(f"The secret code is: "
+                  f"{display_user_guess(original_answer)}\n")
             print(f"You cracked the code in {attempt_number} attempts.\n")
             print("Would you like to play again? (Y/N)")
             play_again()
             break
-        
+
         elif attempt_number == MAX_ATTEMPTS and position != CODE_LENGTH:
             graphics.game_over()
-            print(f"The secret code was: {display_user_guess(original_answer)}\n")
+            print(f"The secret code was: "
+                  f"{display_user_guess(original_answer)}\n")
             print("You were unable to guess the code. Try again? (Y/N)")
             play_again()
             break
-        
+
         else:
             attempt_number += 1
             print(f"Correct number and position: {position}")
             print(f"Correct number, but incorrect position: {number}")
-            print(f"You have {MAX_ATTEMPTS - attempt_number + 1} attempts remaining.\n")
+            print(f"You have {MAX_ATTEMPTS - attempt_number + 1}"
+                  f"attempts remaining.\n")
 
 
 def user_guess_input(attempt):
@@ -134,17 +139,19 @@ def user_guess_input(attempt):
     """
     while True:
         try:
-            guess = input(f"Attempt {attempt + 1}: Enter your 4-digit guess: ").strip()
-            
+            guess = input(f"Attempt {attempt + 1}: "
+                          f"Enter your 4-digit guess: ").strip()
+
             if len(guess) != CODE_LENGTH or not guess.isdigit():
-                raise ValueError(f"Invalid - please enter exactly {CODE_LENGTH} digits.\n")
+                raise ValueError(f"Invalid - please enter exactly"
+                                 f"{CODE_LENGTH} digits.\n")
 
             guess_list = [int(digit) for digit in guess]
             return guess_list
 
         except ValueError as e:
             print(e)
-            
+
 
 def display_user_guess(guess):
     """
