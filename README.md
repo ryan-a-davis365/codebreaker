@@ -35,7 +35,8 @@ When creating this game, I really wanted to focus on everything working properly
    - [**Story-Based Levels**](#story-based-levels)
    - [**Improved UI**](#improved-ui)
    - [**Accessibility Features**](#accessibility-features)
-1. [**Testing**](#testing)
+1. [**Validation and Testing**](#validation-and-testing)
+[**Bugs and Fixes**](#bugs-and-fixes)
 1. [**Deployment**](#deployment)
    - [**Final Deployment (Render)**](#final-deployment-render)
 1. [**Credits**](#credits)
@@ -90,8 +91,6 @@ Two libraries were imported for this code:
 ## **Current Features**
 
 ### **Main Menu with Error Handling**
-
-![Screenshot of the Main Menu](docs/images/main-menu.png)
 
 The main menu screen is the first thing the player sees when they start the program. It displays the main logo graphic, and below it provides the user with three options:
 
@@ -194,9 +193,27 @@ One of the reasonably simple ideas i would like to implement is different diffic
 
 Obviously, in a command line application it is quite hard to add a lot of depth to UI but i do feel like if i had more time i could of made my program look a little better, with the introduction of colors, spacing out my text so it appears on different parts of the screen etc.
 
-## **Testing**
+## **Validation and Testing**
 
-A separate file has been created for information about testing. Please click the following link to access it: [**TESTING.md**](TESTING.md)
+### **PEP8**
+
+![Screenshot of PEP8](docs/images/pep8.png)
+
+- Code has been passed through the pep8 linter and has returned only 1 problem, it expects 2 lines at the very end of my code after the main_menu() line. This is essential to be at the end of my code and being as it is the last line of the code i cannot leave 2 lines blank under it.
+
+### **Manual Testing**
+
+- The home screen was tested to ensure that only '1', '2' or '3' are accepted as valid inputs. Any other input displays an error message reminding the user what they need to input to proceed.
+- The code that you input when guessing was also tested to ensure that only a 4 digit code can be entered, anything else would display an error message telling the user that a 4 digit code is required for a valid guess.
+- I played the game multiple times to test that the game displayed the correct end-game menu, offering the option to play or again or not.
+- I test many times that upon selecting '2' from the home screen it displays the instructions. The input validation for starting the game by inputing 'Y' or going back to the main menu by inputing 'N' was also tested and working.
+
+## **Bugs and Fixes**
+
+- When the user entered a guess instead of their guess appearing they would get the feedback 'none', this was due to the code in the display_user_guess() function being incorrect. I needed to add the str() method for the numbers entered by the user to display so they could keep track of their previous guesses.
+- The number of attempts remaining and the number of guesses already completed did not add up, this was due to the "attempt number = 0" line being to low in the start_game() function. I resolved this by bringing this line to the top of the function.
+- When running my code through the pep8 linter i had a lot of errors due to my lines of text being too long on print statements. I resolved these by spacing out print statements across 2 lines were necessary.
+- I also had errors when running my code through the pep8 linter due to white space, i resolved these by simply removing the white space by backspacing on them lines.
 
 ## **Deployment**
 
