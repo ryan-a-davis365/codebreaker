@@ -204,7 +204,8 @@ A separate file has been created for information about testing. Please click the
 
 ### **Content**
 
-
+- This project follows the Code Institute 'Love Sandwiches' code-along project, and although the type of project is very different from this one, it no doubt will show some similarity in how certain parts of the code are laid out.
+- All ASCII images and text are all from the [ASCII official website](https://www.asciiart.eu/)
 
 ### **Acknowledgements**
 
