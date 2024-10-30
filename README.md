@@ -82,7 +82,7 @@ This project has been written entirely in Python.
 
 #### **Libraries**
 
-Two libraries were imported for this code:
+One libraries was imported for this code:
 
 **random**:
 
@@ -199,7 +199,7 @@ Obviously, in a command line application it is quite hard to add a lot of depth 
 
 ![Screenshot of PEP8](docs/images/pep8.png)
 
-- Code has been passed through the pep8 linter and has returned only 1 problem, it expects 2 lines at the very end of my code after the main_menu() line. This is essential to be at the end of my code and being as it is the last line of the code i cannot leave 2 lines blank under it.
+- Code has been passed through the pep8 linter and has returned no problems.
 
 ### **Manual Testing**
 
@@ -216,6 +216,20 @@ Obviously, in a command line application it is quite hard to add a lot of depth 
 - I also had errors when running my code through the pep8 linter due to white space, i resolved these by simply removing the white space by backspacing on them lines.
 
 ## **Deployment**
+
+To deploy this project to Render, the following procedure was followed:
+
+1. From the Render dashboard, click on 'New Web Service'.
+1. Connect your GitHub and then select the correct repository.
+1. Choose 'Node' as the language.
+1. Choose a name for your web service.
+1. Make sure main is selected for your branch.
+1. Input the text 'npm install; npm build; pip install -r requirements.txt' to the 'Build Command' section so the neccessary items are downloaded.
+1. Input the text 'node index.js' to the 'Start Command' section so the website will deploy properly.
+1. Navigate yourself to the Environment section and add these 2 things.
+    - Key: 'Port' Value: '8000' (This gives the website a port to go live on)
+    - Key: 'PYTHON_VERSION' Value: '3.12.2' (This sets the correct version of python)
+
 
 ## **Credits**
 
